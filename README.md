@@ -3,7 +3,7 @@
 <img src="images/1.gif" width="600" height="300" >
 
 ## Description
-This code uses a genetic algorithm that attempts to gradually draw a tree 
+This code uses L-systems and a genetic algorithm that attempts to gradually draw a tree 
 with the greatest height and symmetry from previous generations.
 
 ## Some variable info
@@ -34,4 +34,4 @@ The code uses a DDA line generation algorithm to rasterize lines within the cons
 <img src="images/6.gif" width="350" height="300" > <img src="images/7.gif" width="350" height="300" > 
 
 ## Final notes
-The idea behind this project is inspired and based off of [Gabriela Ochoa's paper](https://link.springer.com/chapter/10.1007/BFb0056876) on the subject. The code is rather slow at the moment, and works best with a low initial population and mutation rate between 10-20%.
+The idea behind this project is inspired and based off of [Gabriela Ochoa's paper](https://link.springer.com/chapter/10.1007/BFb0056876) on the subject. I strongly recommend reading her paper for more detailed information. Also, the code is rather slow at the moment, and works best with a low initial population and mutation rate between 10-20%.
