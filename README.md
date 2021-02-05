@@ -1,5 +1,7 @@
 # Genetic Tree Generation
-(image)
+
+<img src="images/1.gif" width="600" height="300" >
+
 ## Description
 This code uses a genetic algorithm that attempts to gradually draw a tree 
 with the greatest height and symmetry from previous generations.
@@ -26,8 +28,9 @@ The child string is initially set to the string of the symmetric parent, and the
 ### Rasterizing
 The code uses a DDA line generation algorithm to rasterize lines within the console window. The implementation I used is from [GeeksforGeeks](https://www.geeksforgeeks.org/dda-line-generation-algorithm-computer-graphics/).
 
-# More Images
-(images)
+# More Images/Gifs
+<img src="images/2.gif" width="450" height="400" > <img src="images/3.png" width="450" height="400" >
+<img src="images/4.gif" width="450" height="400" > 
 
 ## Final notes
 The idea behind this project is inspired and based off of [Gabriela Ochoa's paper](https://link.springer.com/chapter/10.1007/BFb0056876) on the subject. The code is rather slow at the moment, and works best with a low initial population and mutation rate between 10-20%.
