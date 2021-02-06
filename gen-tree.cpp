@@ -14,7 +14,7 @@ int initialStringSize = 25;
 
 int n = 20;
 int ITERATIONS = 3;
-int MUTATION_RATE = 10;
+int MUTATION_RATE = 5;
 
 string dna = "F---F-+++++-+[F[[[[[[]]]]]]]";
 string mutatedDna = "F-+";
@@ -237,7 +237,7 @@ pair<string,string> selection(vector<pair<string, float>> initialPop, float &bes
         lsystem = tmp;
         drawTree(lsystem, tree, maxLength, maxY, deltaTree, true);
     }
-    bestDelta = deltaTree;
+    bestDelta = ((initialPop[symmetricFitness[0].second].second+initialPop[heightValues[heightValues.size()-1].second].second))/2;
     return make_pair(initialPop[heightValues[heightValues.size()-1].second].first, initialPop[symmetricFitness[0].second].first);
 }
 
@@ -270,7 +270,7 @@ vector<pair<string, float>> updatePop(string heightParent, string symmetryParent
 int main()
 {
     srand(time(NULL));
-    
+
     vector<pair<string, float>> initialPop = genpop(n);
     float bestDelta = 0;
 
