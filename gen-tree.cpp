@@ -13,7 +13,7 @@ float treeLength = 2;
 int initialStringSize = 25;
 
 int n = 20;
-int ITERATIONS = 5;
+int ITERATIONS = 3;
 int MUTATION_RATE = 10;
 
 string dna = "F---F-+++++-+[F[[[[[[]]]]]]]";
@@ -128,7 +128,6 @@ vector<pair<string, float>> genpop(int n)
     int check[initialStringSize] = { };
     string tmp = "";
     float stringDelta = 0.00f;
-    srand(time(NULL));
 
     for (int i = 0; i < n; i++)
     {
@@ -245,7 +244,6 @@ pair<string,string> selection(vector<pair<string, float>> initialPop, float &bes
 vector<pair<string, float>> updatePop(string heightParent, string symmetryParent, float &bestDelta)
 {
     vector<pair<string, float>> newPop(n);
-    srand(time(NULL));
 
     string tmp = "";
 
@@ -271,6 +269,8 @@ vector<pair<string, float>> updatePop(string heightParent, string symmetryParent
 
 int main()
 {
+    srand(time(NULL));
+    
     vector<pair<string, float>> initialPop = genpop(n);
     float bestDelta = 0;
 
