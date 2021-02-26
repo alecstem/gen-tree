@@ -10,7 +10,7 @@ with the greatest height and symmetry from previous generations.
 
 ## Some variable info
 
-| Variables            | Explaination                                                                    |
+| Variables            | Explanation                                                                    |
 | ---------------------|:-------------------------------------------------------------------------------:|
 | XSIZE                | Sets the x component of the world window size.                                  |
 | YSIZE                | Sets the y component of the world window size.                                  |
@@ -18,7 +18,7 @@ with the greatest height and symmetry from previous generations.
 | treeLength           | Length of each drawn branch.                                                    |
 | initialStringSize    | The string length of L-systems generated.                                       |
 | n                    | Size of population.                                                             |
-| ITERATIONS           | How many times the rules of the L-system are applied to a given string          |
+| ITERATIONS           | How many times the rules of the L-system are applied to a given string    .      |
 | MUTATION_RATE        | Probability of mutation for each child string in a given generation.            |
 
 ### Selection
