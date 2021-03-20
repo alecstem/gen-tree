@@ -20,6 +20,7 @@ with the greatest height and symmetry from previous generations.
 | n                    | Size of population.                                                             |
 | ITERATIONS           | How many times the rules of the L-system are applied to a given string.         |
 | MUTATION_RATE        | Probability of mutation for each child string in a given generation.            |
+| ANGLE_BOUNDS         | Range that an angle can mutate.                                                 |
 
 ### Selection
 The selection process is based off of two criteria: symmetry and height. It measures symmetry by keeping track of drawn values to the left and right of the center. The height is measured by keeping track of the highest Y value recorded when drawing the tree (however, this has to be done somewhat backwards due to how pixel coordinates work). The most symmetric parent and the tallest parent are used for crossbreeding and mutation.
