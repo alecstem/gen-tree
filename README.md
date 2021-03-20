@@ -35,7 +35,8 @@ The code uses a DDA line generation algorithm to rasterize lines within the cons
 <img src="images/2.gif" width="250" height="200" > <img src="images/3.png" width="250" height="200" >
 <img src="images/tree15.png" width="250" height="200" > <img src="images/5.png" width="250" height="200" > 
 <img src="images/1.gif" width="250" height="200" > <img src="images/7.gif" width="250" height="200" > 
-<img src="images/tree16.png" width="250" height="200" > <img src="images/tree17.png" width="250" height="200" > 
+<img src="images/tree16.png" width="250" height="200" > <img src="images/tree17.png" width="250" height="200" >
+<img src="images/tree18.png" width="250" height="200" > 
 
 ## Final notes
 The idea behind this project is inspired and based off of [Gabriela Ochoa's paper](https://link.springer.com/chapter/10.1007/BFb0056876) on the subject. I strongly recommend reading her paper for more detailed information.
