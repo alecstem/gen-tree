@@ -32,7 +32,7 @@ The code uses a DDA line generation algorithm to rasterize lines within the cons
 
 # More Images/Gifs
 <img src="images/2.gif" width="350" height="300" > <img src="images/3.png" width="350" height="300" >
-<img src="images/4.gif" width="350" height="300" > <img src="images/5.png" width="350" height="300" > 
+<img src="images/tree15.png" width="350" height="300" > <img src="images/5.png" width="350" height="300" > 
 <img src="images/1.gif" width="350" height="300" > <img src="images/7.gif" width="350" height="300" > 
 
 ## Final notes
