@@ -9,14 +9,15 @@ int XSIZE = 600;
 int YSIZE = 150;
 float SCALE = 0.3;
 
-float treeLength = 2;
-int initialStringSize = 25;
+float treeLength = 3;
+int initialStringSize = 30;
 
-int n = 20;
-int ITERATIONS = 3;
-int MUTATION_RATE = 5;
+int n = 40;
+int ITERATIONS = 2;
+int MUTATION_RATE = 15;
+int ANGLE_BOUNDS = 1;
 
-string dna = "F---F-+++++-+[F[[[[[[]]]]]]]";
+string dna = "F---F-+++FFF++-+[F[[[[[[]]]]]]]";
 string mutatedDna = "F-+";
 
 HANDLE hOutput = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -128,6 +129,7 @@ vector<pair<string, float>> genpop(int n)
     int check[initialStringSize] = { };
     string tmp = "";
     float stringDelta = 0.00f;
+    srand(time(NULL));
 
     for (int i = 0; i < n; i++)
     {
@@ -140,7 +142,7 @@ vector<pair<string, float>> genpop(int n)
                 tmp+=dna[randChar];
                 for (int k = 0; k < bracketLength; k++)
                 {
-                    string modifiedDna = "Ff+-";
+                    string modifiedDna = "F+-";
                     tmp+=modifiedDna[rand()%modifiedDna.length()];
                 }
                 tmp+=']';
@@ -237,17 +239,18 @@ pair<string,string> selection(vector<pair<string, float>> initialPop, float &bes
         lsystem = tmp;
         drawTree(lsystem, tree, maxLength, maxY, deltaTree, true);
     }
-    bestDelta = ((initialPop[symmetricFitness[0].second].second+initialPop[heightValues[heightValues.size()-1].second].second))/2;
+    bestDelta = deltaTree;
     return make_pair(initialPop[heightValues[heightValues.size()-1].second].first, initialPop[symmetricFitness[0].second].first);
 }
 
 vector<pair<string, float>> updatePop(string heightParent, string symmetryParent, float &bestDelta)
 {
     vector<pair<string, float>> newPop(n);
+    srand(time(NULL));
 
     string tmp = "";
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n-1; i++)
     {
         tmp = symmetryParent;
         for (int j = 0; j < initialStringSize; j++)
@@ -262,8 +265,17 @@ vector<pair<string, float>> updatePop(string heightParent, string symmetryParent
         }
         newPop[i].first = tmp;
         newPop[i].second = bestDelta;
+
+        int z = rand() % 101;
+
+        if (z < MUTATION_RATE) { newPop[i].second+= -ANGLE_BOUNDS + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(ANGLE_BOUNDS+ANGLE_BOUNDS))); }
+
         tmp = "";
     }
+
+    newPop[n-1].first = symmetryParent;
+    newPop[n-1].second = bestDelta;
+
     return newPop;
 }
 
